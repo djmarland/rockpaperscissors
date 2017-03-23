@@ -22,7 +22,7 @@ module.exports = {
 		'main': './src/js/main.js'
 	},
 	output: {
-		path: path.join(process.cwd(), 'build'),
+		path: path.join(process.cwd(), ''),
 		filename: '[name].js',
 		sourceMapFilename: '[file].map'
 	},

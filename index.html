@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+<head>
+	<title>Rock - Paper - Scissors</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="main.css" rel="stylesheet"></head>
+<body>
+	<!-- I'm storing the templates here for now.
+	     Ideally I'd separate this out and use mustache templates (or JSX).
+	     I could use <template> elements, but they are not supported in IE11
+	     -->
+	<div id="template-start" class="hidden start-screen">
+	    <h1>Rock, Paper, Scissors</h1>
+	    <h2 class="start-screen__label">Players</h2>
+	    <div class="grid">
+	        <div class="g 1/3">
+            <label class="radio">
+                <span class="radio__label">0</span>
+                <input class="radio__input" type="radio" name="players" value="0" id="players-0">
+            </label>
+            </div>
+	        <div class="g 1/3">
+            <label class="radio">
+                <span class="radio__label">1</span>
+                <input class="radio__input" type="radio" name="players" value="1" id="players-1">
+            </label>
+            </div>
+	        <div class="g 1/3">
+            <label class="radio">
+                <span class="radio__label">2</span>
+                <input class="radio__input" type="radio" name="players" value="2" id="players-2">
+            </label>
+            </div>
+	    </div>
+	    <h2 class="start-screen__label">Game mode</h2>
+	    <div class="grid">
+	        <div class="g 1/2">
+            <label class="radio">
+                <span class="radio__label">Standard</span>
+                <input class="radio__input" type="radio" name="mode" value="standard" id="mode-standard">
+            </label>
+            </div>
+	        <div class="g 1/2">
+            <label class="radio">
+                <span class="radio__label">Enhanced</span>
+                <input class="radio__input" type="radio" name="mode" value="enhanced" id="mode-enhanced">
+            </label>
+            </div>
+        </div>
+	    <p><button class="button" id="start-button">Start</button></p>
+	</div>
+
+	<div id="template-board" class="hidden">
+	    <button class="button" id="back-button">Back</button>
+
+	 	<div class="grid">
+	 	<div class="g 1/3@l">
+	    <div id="player1" class="player">
+	        <h2 class="player__name">Player 1</h2>
+	        <p class="score player__score a">0</p>
+	        <p class="move"></p>
+	        <div class="playerButtons player__buttons text--center">
+	            <button class="button move-rock">Rock</button>
+	            <button class="button move-paper">Paper</button>
+	            <button class="button move-scissors">Scissors</button>
+	            <button class="button move-lizard">Lizard</button>
+	            <button class="button move-spock">Spock</button>
+	        </div>
+        </div>
+        </div>
+	 	<div class="g 1/3@l">
+        <div id="result-text" class="result-text text--center c"></div>
+        </div>
+
+	 	<div class="g 1/3@l">
+        <div id="player2" class="player">
+            <h2 class="player__name">Player 2</h2>
+            <p class="score player__score a">0</p>
+            <p class="move"></p>
+            <div class="playerButtons player__buttons text--center">
+                <button class="button move-rock">Rock</button>
+                <button class="button move-paper">Paper</button>
+                <button class="button move-scissors">Scissors</button>
+                <button class="button move-lizard">Lizard</button>
+                <button class="button move-spock">Spock</button>
+            </div>
+        </div>
+        </div>
+        </div>
+
+        <p class="text--center"><button class="button" id="next-round">Next round</button></p>
+	</div>
+<script type="text/javascript" src="main.js"></script></body>
+</html>
