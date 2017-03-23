@@ -1,0 +1,11 @@
+.player {
+  @extend .text--center;
+}
+.player__name {
+}
+.player__score {
+  margin-bottom: $size-grid-unit;
+}
+.player__buttons {
+  margin-top: $size-grid-unit;
+}

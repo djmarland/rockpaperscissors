@@ -1,0 +1,20 @@
+.h-context {
+    display: block;
+}
+.h-context__item {
+    &:after {
+        content: " / ";
+    }
+    &:last-child:after {
+        content: "";
+    }
+}
+.h-context__link {
+    display: inline;
+}
+
+@include mq($from: xl) {
+    .h-context__link {
+        display: none;
+    }
+}

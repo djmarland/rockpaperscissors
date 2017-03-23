@@ -1,0 +1,15 @@
+.radio {
+  @extend .island;
+  @extend .text--center;
+  background: $color-secondary-mid;
+  display: block;
+  cursor: pointer;
+}
+.radio__label {
+  display: block;
+  margin-bottom: $size-grid-unit-small;
+}
+.radio__input {
+  display: block;
+  margin:0 auto;
+}

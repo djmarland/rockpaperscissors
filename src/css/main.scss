@@ -1,7 +1,17 @@
-body {
-	background-color: green;
+@import 'setup/setup';
+@import 'core/core';
+@import 'atoms/atoms';
+@import 'molecules/molecules';
+@import 'organisms/organisms';
 
-	h1 {
-		color: white;
-	}
-}
+//body {
+//	background-color: green;
+//
+//	h1 {
+//		color: white;
+//	}
+//}
+//
+//.hidden {
+//	display: none;
+//}

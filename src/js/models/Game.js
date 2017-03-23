@@ -35,6 +35,8 @@ export default class Game {
             MOVE_ROCK, MOVE_PAPER, MOVE_SCISSORS, MOVE_LIZARD, MOVE_SPOCK
         ];
 
+        // define how moves beat each other
+        // and their text when 1 beats 2 and vice versa
         this.RESOLUTIONS = {
             MOVE_ROCK : {
                 MOVE_SCISSORS : ['crushes','are crushed by'],
@@ -63,9 +65,9 @@ export default class Game {
         }
 
         this.gameMode = gameMode;
-        this.availableMoves = Game.STANDARD_MOVES;
+        this.availableMoves = this.STANDARD_MOVES;
         if (this.gameMode === GAME_MODE_ENHANCED) {
-            this.availableMoves = Game.ENHANCED_MOVES;
+            this.availableMoves = this.ENHANCED_MOVES;
         }
 
         this.player1Score = 0;
@@ -103,14 +105,23 @@ export default class Game {
         this.player1Move = move;
     }
 
+    getPlayer1Move() {
+        return this.player1Move;
+    }
+
     setPlayer2Move(move) {
         this.validateMove(move);
         this.player2Move = move;
     }
 
+    getPlayer2Move() {
+        return this.player2Move;
+    }
+
     getWinner() {
         // a draw if both moves are the same
         if (this.player1Move === this.player2Move) {
+            this.resolutionText = 'DRAW';
             return null;
         }
         // a player that failed to choose in time loses
@@ -121,18 +132,22 @@ export default class Game {
             return PLAYER_ONE_WINS;
         }
 
-        if (this.player2Move in Game.RESOLUTIONS[this.player1Move]) {
+        if (this.player2Move in this.RESOLUTIONS[this.player1Move]) {
             // if this matches then player one has won
             // the first option becomes the resolution text
             this.resolutionText =
-                Game.RESOLUTIONS[this.player1Move][this.player2Move][0];
+                this.RESOLUTIONS[this.player1Move][this.player2Move][0];
             return PLAYER_ONE_WINS;
         }
         // if we got here then player 2 has won
         // the second option becomes the resolution text (reverse option)
         this.resolutionText =
-            Game.RESOLUTIONS[this.player2Move][this.player1Move][1];
+            this.RESOLUTIONS[this.player2Move][this.player1Move][1];
         return PLAYER_TWO_WINS;
+    }
+
+    getResolutionText() {
+        return this.resolutionText;
     }
 
     endRound() {
@@ -142,8 +157,6 @@ export default class Game {
         } else if (winner === 2) {
             this.player2Score++;
         }
-        this.player1Move = null;
-        this.player2Move = null;
     }
 
     resetRound() {

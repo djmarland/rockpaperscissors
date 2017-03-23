@@ -1,5 +1,5 @@
 require('../css/main.scss');
 
-import print from './module';
+import App from './controllers/App';
 
-print('it works well!');
+new App();

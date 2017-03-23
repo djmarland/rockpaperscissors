@@ -1,0 +1,114 @@
+.color-brand {
+    background-color: $color-brand;
+}
+
+.color-black {
+    background-color: $color-black;
+}
+.color-grey-darkest {
+    background-color: $color-grey-darkest;
+}
+.color-grey-dark {
+    background-color: $color-grey-dark;
+}
+.color-grey-mid {
+    background-color: $color-grey-mid;
+}
+.color-grey-light {
+    background-color: $color-grey-light;
+}
+.color-grey-lightest {
+    background-color: $color-grey-lightest;
+}
+.color-white {
+    background-color: $color-white;
+}
+
+.color-primary-dark {
+    background-color: $color-primary-dark;
+}
+.color-primary-mid {
+    background-color: $color-primary-mid;
+}
+.color-primary-light {
+    background-color: $color-primary-light;
+}
+
+.color-secondary-dark {
+    background-color: $color-secondary-dark;
+}
+.color-secondary-mid {
+    background-color: $color-secondary-mid;
+}
+.color-secondary-light {
+    background-color: $color-secondary-light;
+}
+
+.color-tertiary-dark {
+    background-color: $color-tertiary-dark;
+}
+.color-tertiary-mid {
+    background-color: $color-tertiary-mid;
+}
+.color-tertiary-light {
+    background-color: $color-tertiary-light;
+}
+
+.color-complimentary-dark {
+    background-color: $color-complimentary-dark;
+}
+.color-complimentary-mid {
+    background-color: $color-complimentary-mid;
+}
+.color-complimentary-light {
+    background-color: $color-complimentary-light;
+}
+
+.color-box--body,
+body {
+    background-color: $color-body-bg;
+    color: $color-body-text;
+    a {
+        color: $color-body-link;
+        &:hover,
+        &:active,
+        &:focus {
+            color: $color-body-link-hover;
+        }
+    }
+    .keyline {
+        border-color: $color-body-keyline;
+    }
+}
+
+.color-box--brand {
+    background-color: $color-brand;
+    color: $color-white;
+    a {
+        color: $color-complimentary-mid;
+        &:hover,
+        &:active,
+        &:focus {
+            color: $color-tertiary-light;
+        }
+    }
+    .keyline {
+        border-color: $color-grey-light;
+    }
+}
+
+.color-box--subtle {
+    background-color: $color-primary-light;
+    color: $color-black;
+    a {
+        color: $color-primary-dark;
+        &:hover,
+        &:active,
+        &:focus {
+            color: $color-secondary-dark;
+        }
+    }
+    .keyline {
+        border-color: $color-grey-dark;
+    }
+}

@@ -1,0 +1,37 @@
+.link--invert {
+    background: $color-body-link;
+    color: $color-body-bg;
+    fill: $color-body-bg;
+    position: relative;
+    &:hover,
+    &:active,
+    &:focus {
+        background: $color-body-link-hover;
+        color: $color-body-bg;
+        text-decoration: none;
+    }
+}
+
+.link--button {
+    @extend .link--invert;
+    border-radius: $size-grid-unit-tiny;
+    padding: $size-grid-unit-small $size-grid-unit;
+    display: inline-block;
+}
+
+.link--invert-active {
+    background: $color-brand;
+    color: $color-brand-text;
+    &:after {
+        content: "";
+        width: 0;
+        height: 0;
+        border-left: 6px solid transparent;
+        border-right: 6px solid transparent;
+        border-bottom: 6px solid $color-body-bg;
+        margin-left: -3px;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+    }
+}

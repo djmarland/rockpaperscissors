@@ -1,0 +1,27 @@
+.move-icon:after {
+  display: block;
+  padding: $size-grid-unit * 2;
+  font-size: 3rem;
+  text-align: center;
+}
+
+.move-icon--MOVE_ROCK:after {
+  background: #ffcecc;
+  content: "👊️";
+}
+.move-icon--MOVE_PAPER:after {
+  background: #c8cbff;
+  content: "✋️";
+}
+.move-icon--MOVE_SCISSORS:after {
+  background: #7aff71;
+  content: "✌️";
+}
+.move-icon--MOVE_LIZARD:after {
+  background: #f4ffbd;
+  content: "👌️";
+}
+.move-icon--MOVE_SPOCK:after {
+  background: #ffc6a9;
+  content: "🖖";
+}
